@@ -39,11 +39,11 @@ echo "\e[45m Install torchvision package \e[0m"
 cd
 git clone https://github.com/pytorch/vision torchvision
 cd torchvision
-sudo apt-get install -y libavcodec-dev libavformat-dev libswscale-dev
+sudo apt-get install -y libavcodec-dev libavformat-dev libswscale-dev libpng-dev libjpeg-dev
+sudo -H pip3 install pillow==8.4.0
 git checkout tags/v0.11.3
 sudo -H python3 setup.py install
 cd  ../
-sudo -H pip3 install pillow
 
 # pip dependencies for pytorch-ssd
 echo "\e[45m Install dependencies for pytorch-ssd \e[0m"
